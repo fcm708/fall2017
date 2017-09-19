@@ -1,0 +1,13 @@
+try these: *5 is bonus*
+
+1. Write a program that initializes two variables, x and y to any two numbers you so choose
+	- add the two numbers, and store the answer in a new variable
+	- print the sum on the screen
+
+2. write the same program as above, but allow the user to input numbers
+
+3. write the code to determine if user inputted numbers are even or odd
+
+4. write the code to determine if the user inputted number is negative, positive or 0
+
+5. write the code to find the square root of a number

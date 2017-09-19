@@ -1,0 +1,45 @@
+
+x="Hello World"
+x2='Hello World'
+x3="She said 'hello world' "
+#this won't work:
+# x4='She said 'hello world' '
+
+#print(x+3) this doesn't work because string plus int
+
+print(x+x2) #concatenation 
+
+***************************************
+
+cm=100
+m=cm/100
+
+
+#print("what cm value do you want to convert?")
+
+cm=input("what cm value do you want to convert?") #any value taken by the input function is stored as a string!!!
+
+#typecasting: from string to int
+
+cm=int(cm)#please convert the value stored in the variable cm to an integer data type, then store it back into cm
+
+print(cm+10)
+
+
+
+
+
+
+
+x5="100" #this is not an integer, it is a string!
+
+
+
+print(x+" "+x2) #concatenation
+x4="hotdog "
+print(x4 * 4) #redefining the multip symbol for usage with strings, rather than ints. 
+print(x5*4) #100 is NOT an INT, because before we said "100", so it is a string
+print(10*10)
+
+
+ 
