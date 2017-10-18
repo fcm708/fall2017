@@ -1,0 +1,35 @@
+def modFun(num1, num2):
+  return num1%num2  
+
+
+choice=True;
+while(choice):
+  print(modFun(1,2))
+  userIn=int(input("Do you want to use the calculator? 1 or 0"))
+  if(userIn==0):
+    choice=False;
+  
+#no while loop
+#infinite while loop
+#correct while loop 
+
+
+
+list1=[2,3,4,5]
+
+print(list1[4])  #this is an error
+
+
+
+
+
+to do list
+####palindrome code
+####basic webserver
+
+
+
+#tcp vs udp for multimedia
+#vid on multi/demulti
+
+https://www.youtube.com/watch?v=bHsCrnVgtPI
