@@ -1,0 +1,40 @@
+https://repl.it/repls/CoordinatedFrightenedHind
+
+
+
+class Animal(object):
+  def __init__(self, num_years=0 ):
+    print("Animal init running")
+    self.age=num_years
+    self.name=None
+  #getters/setters
+  def get_age(self):
+    return self.age
+  def set_age(self, num_years):
+    self.age=num_years
+  def get_name(self):
+    return self.name
+  def set_name(self, new_name):
+    self.name=new_name
+  
+  #overloading the __str__ function to print properly
+  def __str__(self):
+    return "Animal name: "+ self.name+ "\n" +"Animal age: " + str(self.age) 
+
+class Cat(Animal):
+  def __init__(self, num_years, name):
+    print("Cat init running")
+    Animal.__init__(self,num_years)
+    self.age=num_years
+    self.food=""
+  def speak(self):
+    print("Meow")
+  def __str__(self):
+    return "Cat name: "+ self.name +"\n" +"Cat age: " + str(self.age)
+    
+
+c1=Cat(10, "Snowball")
+c1.set_name(input("Please enter a cat name"))
+print(c1)
+  
+
