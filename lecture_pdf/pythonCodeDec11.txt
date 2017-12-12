@@ -1,0 +1,72 @@
+class Animal(object):
+  def __init__(self, age):
+    self.age=age
+    self.name=None
+  def setAge(self, newAge):
+    self.age=newAge
+  def getAge(self):
+    return self.age
+  def setName(self, newName=""):
+    self.name=newName
+  def getName(self):
+    return self.name
+  def __str__(self):
+    return "Animal name: "+ str(self.name) +"\n" + "Animal Age: " + str(self.age)
+class Person(Animal):
+  def __init__(self, name, age):
+    Animal.__init__(self, age)
+    self.setName(name)
+    self.friends=[]
+  def getFriends(self):
+    return self.friends
+  def setFriends(self, fname):
+    if fname not in self.friends:
+      self.friends.append(fname)
+  def speak(self):
+    return ("Hello")
+  def ageDiff(self, other):
+    diff=abs(self.age-other.age)
+    print("The age difference is "+ str(diff))
+  def __str__(self):
+    return("Person name: " + str(self.name)+ "\nPerson age: " +str(self.age))
+class Dog(Animal):
+  count=1 # 1 , 2 , 3...
+  def __init__(self, age, p1=None, p2=None):
+    Animal.__init__(self, age)
+    self.parent1=p1
+    self.parent2=p2
+    self.dogId=Dog.count
+    Dog.count+=1
+  def setParent1(self, p1):
+    self.parent1=p1
+  def getParent1(self):
+    return parent1
+  def setParent2(self, p2):
+    self.parent2=p2
+  def getParent2(self):
+    return parent2
+  def getDogId(self):
+    return self.dogId
+  def __add__(self, other):
+    return Dog(0, self, other)
+  #dog object + dog object
+
+a= Animal(10)
+a.setName("Bob")
+print(a)
+#person object
+p= Person("Alice", 42)
+print(p)
+p.setFriends("Bob")
+listOfFriends=p.getFriends()
+for friend in listOfFriends:
+  print(p.speak() + " "+ friend)
+p.ageDiff(a)
+d=Dog(10)
+print("First Dog's id: " , d.getDogId())
+d2=Dog(10)
+print("Second Dog's id: " , d2.getDogId())
+d3=d+d2
+print(d3.getDogId())
+print("Third Dog's id: " , d3.getDogId())
+
